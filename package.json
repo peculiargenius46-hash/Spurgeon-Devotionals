@@ -1,0 +1,15 @@
+{
+  "name": "morning-and-evening",
+  "version": "1.1.0",
+  "description": "Spurgeon's Morning and Evening as an installable reading app: 732 readings with search, bookmarks, highlights, notes and offline use.",
+  "private": true,
+  "scripts": {
+    "build": "python3 build/build.py",
+    "test": "python3 build/build.py && node build/test.mjs && node build/pwa-test.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/literata": "^5.3.0",
+    "@sparticuz/chromium": "^153.0.0",
+    "puppeteer-core": "^25.16.0"
+  }
+}
