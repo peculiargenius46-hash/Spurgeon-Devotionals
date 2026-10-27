@@ -77,6 +77,10 @@ def icon(size):
     return im.resize((size, size), Image.LANCZOS)
 for s in (512, 192, 180): icon(s).save(os.path.join(pwa, f'icon-{s}.png'), optimize=True)
 
+# ready-to-host copy in public/ (this is the folder a static host such as Netlify serves)
+PUB = os.path.join(ROOT, 'public')
+shutil.rmtree(PUB, ignore_errors=True); shutil.copytree(pwa, PUB)
+
 # zip for hosting
 z = os.path.join(DIST, 'morning-and-evening-app.zip')
 with zipfile.ZipFile(z, 'w', zipfile.ZIP_DEFLATED) as zf:

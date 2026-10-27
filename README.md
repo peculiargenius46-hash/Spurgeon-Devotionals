@@ -28,6 +28,8 @@ This writes to `dist/`:
 - `dist/test/index.html` a debug build used by the tests
 - `dist/morning-and-evening-app.zip` the `pwa` folder plus `build/README.md`, ready to upload to a static host
 
+`npm run build` also refreshes `public/`, a ready-to-host copy of the app that is committed to the repo. `netlify.toml` tells Netlify to serve that folder with no build command, so after any change: run `npm run build`, commit, push, and Netlify redeploys.
+
 Hosting and phone-install steps for end users are in `build/README.md`.
 
 ## Test

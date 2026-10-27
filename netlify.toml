@@ -1,0 +1,9 @@
+# The app is plain files. Netlify serves the public folder as it is, with no build step.
+# After changing anything in src/, run `npm run build` and commit the refreshed public folder.
+[build]
+  publish = "public"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
